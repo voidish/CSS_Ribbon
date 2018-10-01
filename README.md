@@ -1,0 +1,1 @@
+The CSS ribbon is completely written in CSS.
