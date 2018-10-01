@@ -1,0 +1,77 @@
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Ubuntu Condensed', sans-serif;
+ }
+
+
+ .box {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 400px;
+     height: 400px;
+     background: #3c3c3c;
+     box-sizing: border-box;
+     border-radius: 10px;
+ }
+
+ .box h3 {
+     position: relative;
+     width: 430px;
+     left: -15px;
+     color: #fff;
+     text-align: center;
+     background: #3ebc8c;
+     margin: 40px 0 0;
+     padding: 8px 0;
+     font-size: 36px;
+     text-transform: uppercase;
+     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+ }
+
+ .box h3:before {
+     content: '';
+     position: absolute;
+     width: 15px;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: #2f7b5e;
+     transform-origin: top left;
+     transform: skewY(-50deg);
+     transition: transform .5s;
+     z-index: -1;
+ }
+
+ .box:hover h3:before {
+     transform: skewY(50deg);
+ }
+
+ .box h3:after {
+     content: '';
+     position: absolute;
+     width: 15px;
+     height: 100%;
+     background: #2f7b5e;
+     top: 0;
+     right: 0;
+     transform-origin: top right;
+     transform: skewY(-50deg);
+     transition: 0.5s transform;
+     z-index: -1;
+ }
+
+ .box:hover h3:after {
+     transform: skewY(50deg);
+ }
+
+ .box p {
+     padding: 0 20px;
+     font-size: 18px;
+     color: #fff;
+     text-align: center;
+ }
